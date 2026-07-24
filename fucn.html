@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Responsive Dashboard</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f1f5f9;
+}
+
+
+.dashboard{
+    width:95%;
+    max-width:1200px;
+    margin:30px auto;
+    background:white;
+    min-height:650px;
+    display:flex;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+
+/* Sidebar */
+
+.sidebar{
+
+    width:220px;
+    background:#0f172a;
+    color:white;
+    padding:25px;
+
+}
+
+
+.logo{
+
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:40px;
+
+}
+
+
+.menu li{
+
+    list-style:none;
+    padding:15px 0;
+    color:#cbd5e1;
+
+}
+
+
+
+/* Main Area */
+
+.content{
+
+    flex:1;
+    padding:30px;
+
+}
+
+
+.title{
+
+    font-size:28px;
+    font-weight:bold;
+    color:#1e293b;
+    margin-bottom:25px;
+
+}
+
+
+
+/* Cards */
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+
+}
+
+
+.card{
+
+background:#ffffff;
+border:1px solid #e2e8f0;
+padding:20px;
+border-radius:10px;
+
+}
+
+
+.card h3{
+
+font-size:14px;
+color:#64748b;
+
+}
+
+
+.number{
+
+font-size:30px;
+font-weight:bold;
+margin-top:10px;
+color:#0f172a;
+
+}
+
+
+.green{
+
+color:#16a34a;
+font-size:14px;
+
+}
+
+
+
+/* Content Section */
+
+.section{
+
+margin-top:35px;
+padding:20px;
+border:1px solid #e2e8f0;
+border-radius:10px;
+
+}
+
+
+.section h2{
+
+margin-bottom:15px;
+color:#1e293b;
+
+}
+
+
+.progress{
+
+height:10px;
+background:#e2e8f0;
+border-radius:10px;
+
+}
+
+
+.progress span{
+
+display:block;
+width:75%;
+height:100%;
+background:#14b8a6;
+border-radius:10px;
+
+}
+
+
+
+/* Mobile Navigation */
+
+.bottom-nav{
+
+display:none;
+
+}
+
+
+
+/* Tablet */
+
+@media(max-width:900px){
+
+
+.sidebar{
+
+width:70px;
+
+}
+
+
+.menu li{
+
+font-size:0;
+
+}
+
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+
+.dashboard{
+
+flex-direction:column;
+
+}
+
+
+.sidebar{
+
+display:none;
+
+}
+
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.bottom-nav{
+
+display:flex;
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+height:60px;
+background:#0f172a;
+justify-content:space-around;
+align-items:center;
+
+}
+
+
+.bottom-nav div{
+
+width:15px;
+height:15px;
+background:white;
+border-radius:50%;
+
+}
+
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard">
+
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<div class="logo">
+Dashboard
+</div>
+
+
+<ul>
+
+<li>🏠 Overview</li>
+<li>👥 Users</li>
+<li>📊 Analytics</li>
+<li>📁 Projects</li>
+<li>⚙ Settings</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- Dashboard Content -->
+
+<div class="content">
+
+
+<div class="title">
+Dashboard Overview
+</div>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>Total Users</h3>
+
+<div class="number">
+12,450
+</div>
+
+<p class="green">
+↑ 12% this month
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Total Sales</h3>
+
+<div class="number">
+$45,200
+</div>
+
+<p class="green">
+↑ 8% growth
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Orders</h3>
+
+<div class="number">
+1,250
+</div>
+
+<p class="green">
+↑ 15% increase
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Revenue</h3>
+
+<div class="number">
+$78K
+</div>
+
+<p class="green">
+↑ 20% profit
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="section">
+
+<h2>
+Project Progress
+</h2>
+
+
+<p>
+Website redesign project
+</p>
+
+
+<div class="progress">
+
+<span></span>
+
+</div>
+
+
+<br>
+
+
+<p>
+Mobile application development
+</p>
+
+
+<div class="progress">
+
+<span style="width:55%"></span>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="section">
+
+<h2>
+Recent Activity
+</h2>
+
+
+<p>
+✔ New user registration completed</p>
+
+<p>
+✔ Payment received successfully</p>
+
+<p>
+✔ Project status updated</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="bottom-nav">
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+</div>
+
+
+</body>
+
+</html>
